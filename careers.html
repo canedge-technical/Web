@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CANEDEGE CONSULTANT COMPANY specializes in high-quality engineering and consulting services across multiple industries.">
+    <meta name="keywords" content="consulting, engineering, materials, industries, clean energy, metallurgy">
+    <meta name="author" content="CANEDEGE CONSULTANT COMPANY">
+    <title>Careers at CANEDEGE CONSULTANT COMPANY</title>
+
+    <!-- Include Libre Baskerville Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* General Styles */
+        body, html {
+            font-family: 'Libre Baskerville', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #000;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000000;
+            padding: 1em;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-menu {
+            max-width: 150px;
+        }
+
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            font-size: 2em;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        /* Navigation Menu */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffdd57;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575c60;
+        }
+
+        /* Show dropdown content on hover for desktop */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #000;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.5s ease, opacity 0.5s ease;
+            }
+
+            .nav-links.show {
+                display: flex;
+                max-height: 500px;
+                opacity: 1;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            .header-container {
+                justify-content: space-between;
+            }
+
+            /* Collapsible submenus */
+            .dropdown-content {
+                position: relative;
+                left: auto;
+                top: auto;
+                width: 100%;
+                display: none;
+            }
+
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+        }
+
+        /* Ensure focus outline for accessibility */
+        .hamburger-menu:focus, .nav-links a:focus, .dropdown a:focus {
+            outline: 2px solid #fff;
+            outline-offset: 4px;
+        }
+
+        /* Hero Section */
+        .hero-careers {
+            background-image: url('videos/getjob.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            border-radius: 10px;
+            color: black;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        /* Job Search Section */
+        .job-search-section {
+            padding: 3em;
+            background-color: #f9f9f9;
+        }
+
+        .job-search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2em;
+        }
+
+        .job-search-input {
+            padding: 12px;
+            width: 400px;
+            margin-right: 10px;
+            font-size: 1em;
+        }
+
+        .job-search-button {
+            padding: 12px 24px;
+            background-color: #002147;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 1em;
+        }
+
+        .job-search-button:hover {
+            background-color: #00122d;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        footer .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .footer-container h4 {
+            font-size: 1.5em;
+        }
+
+        footer .footer-container p {
+            font-size: 1em;
+        }
+
+        footer .footer-container nav {
+            display: flex;
+            gap: 1.5em;
+        }
+
+        footer .footer-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .footer-container a {
+            color: #ffdd57;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-container a:hover {
+            color: #e6c446;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            footer .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-container nav {
+                margin-top: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navigation" role="button" tabindex="0">
+                &#9776;
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav id="navigation">
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="index.html" aria-label="Home">Home</a>
+                        <div class="dropdown-content">
+                            <a href="#about-us">About Us</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html" aria-label="Services">Services</a>
+                        <div class="dropdown-content">
+                            <a href="consult.html">Consulting</a>
+                            <a href="ENG.html">Engineering</a>
+                            <a href="cons.html">Commissioning</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="industries.html" aria-label="Industries & Technologies">Industries & Technologies</a>
+                        <div class="dropdown-content">
+                            <a href="Medical.html">Medical and Pharmaceuticals</a>
+                            <a href="Metal.html">Metallurgy and Mining</a>
+                        </div>
+                    </li>
+                    <li><a href="startup.html">Innovations</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Logo in the Center -->
+            <div class="logo-menu">
+                <img src="videos/Transparent.JPEG" alt="Company Logo" class="menu-logo">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with Background Image -->
+        <section class="hero-careers">
+            <div class="hero-content">
+                <h1>JOIN OUR TEAM</h1>
+                <p>Build Your Future With Us</p>
+            </div>
+        </section>
+
+        <!-- Add space between the hero section and the job search section -->
+        <div style="height: 50px;"></div>
+
+        <!-- Job Search Section -->
+        <section class="job-search-section">
+            <div class="container">
+                <h2>Find Your Next Job</h2>
+                <div class="job-search-container">
+                    <input type="text" placeholder="Search jobs..." class="job-search-input">
+                    <button class="job-search-button">Search</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Company Information -->
+            <div class="footer-company-info">
+                <h4>About CANEDGE TECHNICAL SERVICES CORPORATION</h4>
+                <p>We specialize in delivering technical and engineering services for various industries, including extractive metallurgy, consulting, and commissions. Our commitment to innovation, integrity, and quality ensures that we meet our client's highest expectations.</p>
+                <p>&copy; 2024 CANEDGE TECHNICAL SERVICES CORPORATION. All rights reserved.</p>
+            </div>
+
+<!-- Navigation Links -->
+<div class="footer-links">
+    <h4 style="color: #fff;">Quick Links</h4>
+    <nav>
+        <ul>
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="services.html" style="color: #fff; text-decoration: none;">Services</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+            <li><a href="policy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="terms.html" style="color: #fff; text-decoration: none;">Terms of Service</a></li>
+        </ul>
+    </nav>
+</div>
+
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const dropdowns = document.querySelectorAll('.dropdown');
+
+        // Toggle the hamburger menu
+        function toggleMenu() {
+            const isOpen = navLinks.classList.contains('show');
+            if (isOpen) {
+                navLinks.classList.remove('show');
+                hamburgerMenu.setAttribute('aria-expanded', 'false');
+            } else {
+                navLinks.classList.add('show');
+                hamburgerMenu.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // Toggle menu with click and keyboard (Enter/Space)
+        hamburgerMenu.addEventListener('click', toggleMenu);
+        hamburgerMenu.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.hamburger-menu') && !event.target.closest('.nav-links')) {
+                navLinks.classList.remove('show');
+                hamburgerMenu.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close menu with 'Esc' key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navLinks.classList.contains('show')) {
+                navLinks.classList.remove('show');
+                hamburgerMenu.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Dropdowns: only one open at a time, clicking links should work
+        dropdowns.forEach(dropdown => {
+            const trigger = dropdown.querySelector('a');
+            const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+            // Toggle submenu on click (only on mobile)
+            trigger.addEventListener('click', function(event) {
+                const isMobile = window.innerWidth <= 768;
+
+                if (isMobile) {
+                    event.preventDefault(); // Prevent navigation on mobile when expanding submenus
+
+                    dropdowns.forEach(otherDropdown => {
+                        const otherContent = otherDropdown.querySelector('.dropdown-content');
+                        if (otherContent !== dropdownContent) {
+                            otherContent.classList.remove('show');
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+
+                    // Toggle the clicked dropdown's content
+                    dropdownContent.classList.toggle('show');
+                    dropdown.classList.toggle('active');
+                }
+            });
+        })
+    });
+    </script>
+
+</body>
+</html>

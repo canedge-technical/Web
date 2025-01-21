@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CANEDGE TECHNICAL SERVICES CORPORATION Policy Page">
+    <title>Company Policies | CANEDGE TECHNICAL SERVICES CORPORATION</title>
+
+    <!-- Include Libre Baskerville Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* General Styles */
+        body, html {
+            font-family: 'Libre Baskerville', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #000;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #66696d;
+            padding: 1em;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-menu {
+            max-width: 150px;
+        }
+
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            font-size: 2em;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        /* Navigation Menu */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5em;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffdd57;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #66696d;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Show dropdown content on hover for desktop */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #66696d;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.5s ease, opacity 0.5s ease;
+            }
+
+            .nav-links.show {
+                display: flex;
+                max-height: 500px;
+                opacity: 1;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            .header-container {
+                justify-content: space-between;
+            }
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            background-image: url('videos/policy.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3em;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-top: 0.5em;
+        }
+
+        /* Policy Section */
+        .policy-section {
+            padding: 4em 10%;
+            background-color: #f9f9f9;
+        }
+
+        .policy-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .policy-article {
+            margin-bottom: 3em;
+        }
+
+        .policy-article h2 {
+            font-size: 2.5em;
+            margin-bottom: 1.2em;
+            color: #002147;
+        }
+
+        .policy-article h3 {
+            font-size: 1.8em;
+            color: #002147;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        .policy-article p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 1em;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #66696d;
+            color: #fff;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .footer-content nav {
+            display: flex;
+            gap: 1.5em;
+        }
+
+        footer .footer-content p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .cta-button {
+                font-size: 1em;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-content nav {
+                margin-top: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navigation" role="button" tabindex="0">
+                &#9776;
+            </div>
+
+          <!-- Navigation Menu -->
+          <nav id="navigation">
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="index.html" aria-label="Home">Home</a>
+                    <div class="dropdown-content">
+                        <a href="#about-us">About Us</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="services.html" aria-label="Services">Services</a>
+                    <div class="dropdown-content">
+                        <a href="consult.html">Consulting</a>
+                        <a href="ENG.html">Engineering</a>
+                        <a href="commision.html">Commissioning</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="industries.html" aria-label="Industries & Technologies">Industries & Technologies</a>
+                    <div class="dropdown-content">
+                        <a href="Medical.html">Medical and Pharmaceuticals</a>
+                        <a href="Metal.html">Metallurgy and Mining</a>
+                    </div>
+                </li>
+                <li><a href="startup.html">Innovations</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+            </ul>
+        </nav>
+
+            <!-- Logo in the Center -->
+            <div class="logo-menu">
+                <img src="videos/Transparent.JPEG" alt="Company Logo" class="menu-logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Company Policies</h1>
+                <p>Our commitment to transparency, integrity, and sustainability.</p>
+            </div>
+        </section>
+
+        <section class="policy-section">
+            <div class="container">
+                <!-- Introduction -->
+                <article class="policy-article">
+                    <h2>1. Introduction</h2>
+                    <p>Welcome to CANEDGE TECHNICAL SERVICES CORPORATION. We are committed to providing top-notch technical services and ensuring that our customers, partners, and employees operate within a clear, fair, and transparent framework. This policy page outlines the key policies governing our operations, relationships, and overall business conduct.</p>
+                </article>
+
+                <!-- Privacy Policy -->
+                <article class="policy-article">
+                    <h2>2. Privacy Policy</h2>
+                    <h3>2.1. Data Collection</h3>
+                    <p>We collect personal information from our clients to deliver customized services. This includes names, contact information, and technical specifications related to the services requested.</p>
+
+                    <h3>2.2. Data Usage</h3>
+                    <p>Collected data is used solely for the purpose of providing our services, improving our offerings, and for necessary communication with our clients.</p>
+
+                    <h3>2.3. Data Security</h3>
+                    <p>We implement stringent security measures to protect your data from unauthorized access, alteration, or disclosure. Your privacy is our priority.</p>
+
+                    <h3>2.4. Data Sharing</h3>
+                    <p>We do not share personal data with third parties unless required by law or with explicit consent from the client.</p>
+                </article>
+
+                <!-- Service Policy -->
+                <article class="policy-article">
+                    <h2>3. Service Policy</h2>
+                    <h3>3.1. Service Delivery</h3>
+                    <p>CANEDGE TECHNICAL SERVICES CORPORATION is committed to delivering services on time and as per the agreed specifications. We strive for excellence in every project we undertake.</p>
+
+                    <h3>3.2. Quality Assurance</h3>
+                    <p>All our services undergo rigorous quality checks to ensure they meet industry standards and client expectations.</p>
+
+                    <h3>3.3. Client Support</h3>
+                    <p>We offer continuous support to our clients before, during, and after the delivery of services. Our customer service team is available to assist with any inquiries or issues.</p>
+                </article>
+
+                <!-- Employment Policy -->
+                <article class="policy-article">
+                    <h2>4. Employment Policy</h2>
+                    <h3>4.1. Equal Opportunity</h3>
+                    <p>We are an equal opportunity employer. We do not discriminate based on race, gender, age, religion, or any other characteristic protected by law.</p>
+
+                    <h3>4.2. Professional Development</h3>
+                    <p>CANEDGE TECHNICAL SERVICES CORPORATION is committed to the ongoing professional development of our employees. We offer training and development programs to enhance their skills and career growth.</p>
+
+                    <h3>4.3. Workplace Conduct</h3>
+                    <p>All employees are expected to maintain a high standard of professionalism and integrity. Harassment, discrimination, and unethical behavior will not be tolerated.</p>
+                </article>
+
+                <!-- Environmental Policy -->
+                <article class="policy-article">
+                    <h2>5. Environmental Policy</h2>
+                    <h3>5.1. Sustainability</h3>
+                    <p>We are committed to sustainable practices in all aspects of our business. We strive to minimize our environmental footprint through energy-efficient operations and responsible resource management.</p>
+
+                    <h3>5.2. Waste Management</h3>
+                    <p>CANEDGE TECHNICAL SERVICES CORPORATION follows best practices in waste management, ensuring that any waste produced is disposed of in an environmentally friendly manner.</p>
+
+                    <h3>5.3. Compliance</h3>
+                    <p>We adhere to all environmental regulations and standards applicable to our industry.</p>
+                </article>
+
+                <!-- Ethics Policy -->
+                <article class="policy-article">
+                    <h2>6. Ethics Policy</h2>
+                    <h3>6.1. Integrity</h3>
+                    <p>Integrity is at the core of our business operations. We expect all employees, partners, and associates to conduct themselves with honesty and fairness.</p>
+
+                    <h3>6.2. Transparency</h3>
+                    <p>We maintain transparency in our dealings with clients, suppliers, and other stakeholders. All agreements and transactions are documented and accessible for review.</p>
+
+                    <h3>6.3. Conflict of Interest</h3>
+                    <p>Employees and associates must avoid conflicts of interest that could compromise their judgment or objectivity. Any potential conflicts must be disclosed to the management immediately.</p>
+                </article>
+
+                <!-- Compliance and Reporting -->
+                <article class="policy-article">
+                    <h2>7. Compliance and Reporting</h2>
+                    <h3>7.1. Legal Compliance</h3>
+                    <p>CANEDGE TECHNICAL SERVICES CORPORATION complies with all applicable laws and regulations in every jurisdiction where we operate.</p>
+
+                    <h3>7.2. Reporting Violations</h3>
+                    <p>We encourage our employees and partners to report any violations of this policy. Reports can be made anonymously, and retaliation against whistleblowers is strictly prohibited.</p>
+                </article>
+
+                <!-- Updates to Policy -->
+                <article class="policy-article">
+                    <h2>8. Updates to Policy</h2>
+                    <p>This policy page may be updated from time to time. We will notify clients and employees of significant changes. It is the responsibility of all stakeholders to review the policy periodically to stay informed.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Company Information -->
+            <div class="footer-company-info">
+                <h4>About CANEDGE TECHNICAL SERVICES CORPORATION</h4>
+                <p>We specialize in delivering technical and engineering services for various industries, including extractive metallurgy, consulting, and commissions. Our commitment to innovation, integrity, and quality ensures that we meet our client's highest expectations.</p>
+                <p>&copy; 2024 CANEDGE TECHNICAL SERVICES CORPORATION. All rights reserved.</p>
+            </div>
+    
+<!-- Navigation Links -->
+<div class="footer-links">
+    <h4 style="color: #fff;">Quick Links</h4>
+    <nav>
+        <ul>
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="services.html" style="color: #fff; text-decoration: none;">Services</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+            <li><a href="policy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="terms.html" style="color: #fff; text-decoration: none;">Terms of Service</a></li>
+        </ul>
+    </nav>
+</div>
+
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            // Toggle the hamburger menu
+            hamburgerMenu.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+                const isOpen = navLinks.classList.contains('show');
+                hamburgerMenu.setAttribute('aria-expanded', isOpen);
+            });
+        });
+    </script>
+</body>
+</html>

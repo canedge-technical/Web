@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Hemodialysis Solutions | CANEDGE TECHNICAL SERVICES CORPORATION</title>
+  <meta
+    name="description"
+    content="CANEDGE TECHNICAL SERVICES CORPORATION offers high-quality hemodialysis solutions and technologies, including Sodium Bicarbonate, Hemodialysis Acid, and disinfectants for safe and effective dialysis."
+  />
+  <meta
+    name="keywords"
+    content="Hemodialysis, Sodium Bicarbonate, Hemodialysis Acid, Medical Solutions, Engineering, CANEDGE, Disinfectants"
+  />
+  <meta
+    name="author"
+    content="CANEDGE TECHNICAL SERVICES CORPORATION"
+  />
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Hemodialysis Solutions | CANEDGE TECHNICAL SERVICES CORPORATION" />
+  <meta
+    property="og:description"
+    content="Explore CANEDGE's essential hemodialysis solutions, from Sodium Bicarbonate production to Dry Acid Concentrates, designed to ensure safe and efficient dialysis processes."
+  />
+  <!-- Optional OG image (update if you have a specific hero image) -->
+  <meta property="og:image" content="https://www.yoursite.com/images/hemodialysis-hero.jpg" />
+  <meta property="og:url" content="https://www.yoursite.com/hemodialysis.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://www.yoursite.com/hemodialysis.html" />
+
+  <!-- Google Fonts (Libre Baskerville) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    /* General Styles */
+    body, html {
+      font-family: 'Libre Baskerville', serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color: #000;
+      background-color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000000;
+      padding: 1em;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo-menu {
+      max-width: 150px;
+    }
+
+    /* Hamburger Menu */
+    .hamburger-menu {
+      display: none;
+      font-size: 2em;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    /* Navigation Menu */
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffdd57;
+    }
+
+    /* Dropdown Menu Styles */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #000000;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #575c60;
+    }
+
+    /* Show dropdown content on hover for desktop */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Mobile Styles */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+      }
+
+      .nav-links.show {
+        display: flex;
+        max-height: 500px;
+        opacity: 1;
+      }
+
+      .hamburger-menu {
+        display: block;
+      }
+
+      .header-container {
+        justify-content: space-between;
+      }
+
+      .dropdown-content {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        display: none;
+      }
+
+      .dropdown.active .dropdown-content {
+        display: block;
+      }
+    }
+
+    /* Ensure focus outline for accessibility */
+    .hamburger-menu:focus, .nav-links a:focus, .dropdown a:focus {
+      outline: 2px solid #fff;
+      outline-offset: 4px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background-image: url('videos/Med5.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2em;
+      border-radius: 10px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-content h1 {
+      font-size: 3.5em;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .hero-content p {
+      font-size: 1.5em;
+      margin-top: 0.5em;
+    }
+
+    /* Content Section */
+    .content-section {
+      padding: 4em 0;
+      background-color: #fff;
+    }
+
+    .content-section h2 {
+      font-size: 2.5em;
+      color: #002147;
+      margin-bottom: 1.5em;
+      padding-left: 5%;
+    }
+
+    .content-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 4em;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .content-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .content-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .content-item img {
+      width: 45%;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-text {
+      width: 50%;
+      text-align: left;
+    }
+
+    .content-text h3 {
+      font-size: 2em;
+      color: #002147;
+      margin-bottom: 0.5em;
+    }
+
+    .content-text p {
+      font-size: 1.2em;
+      color: #333;
+      margin-bottom: 1em;
+    }
+
+    /* Call to Action Section */
+    .cta-section {
+      padding: 4em 0;
+      background-color: #002147;
+      color: #fff;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5em;
+      margin-bottom: 1em;
+    }
+
+    .cta-section p {
+      font-size: 1.2em;
+      margin-bottom: 2em;
+    }
+
+    .cta-section a {
+      background-color: #ffdd57;
+      color: #002147;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-section a:hover {
+      background-color: #e6c446;
+    }
+
+    /* Footer Styles */
+    footer {
+      background-color: #000000;
+      color: #fff;
+      padding: 2em 0;
+      text-align: center;
+    }
+
+    footer .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    footer .footer-container nav {
+      display: flex;
+      gap: 1.5em;
+    }
+
+    footer .footer-container p {
+      margin: 0;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      .cta-button {
+        font-size: 1em;
+      }
+
+      .content-item {
+        flex-direction: column;
+      }
+
+      .content-item img {
+        width: 100%;
+        margin-bottom: 1.5em;
+      }
+
+      .content-text {
+        width: 100%;
+        text-align: center;
+      }
+
+      footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      footer .footer-content nav {
+        margin-top: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Hamburger Menu Icon -->
+            <div
+              class="hamburger-menu"
+              aria-label="Toggle navigation"
+              aria-expanded="false"
+              aria-controls="navigation"
+              role="button"
+              tabindex="0"
+            >
+              &#9776;
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav id="navigation">
+              <ul class="nav-links">
+                  <li class="dropdown">
+                      <a href="index.html" aria-label="Home">Home</a>
+                      <div class="dropdown-content">
+                          <a href="#about-us">About Us</a>
+                      </div>
+                  </li>
+                  <li class="dropdown">
+                      <a href="services.html" aria-label="Services">Services</a>
+                      <div class="dropdown-content">
+                          <a href="consult.html">Consulting</a>
+                          <a href="ENG.html">Engineering</a>
+                          <a href="commision.html">Commissioning</a>
+                      </div>
+                  </li>
+                  <li class="dropdown">
+                      <a href="industries.html" aria-label="Industries &amp; Technologies">Industries &amp; Technologies</a>
+                      <div class="dropdown-content">
+                          <a href="Medical.html">Medical and Pharmaceuticals</a>
+                          <a href="Metal.html">Metallurgy and Mining</a>
+                      </div>
+                  </li>
+                  <li><a href="startup.html">Innovations</a></li>
+                  <li><a href="careers.html">Careers</a></li>
+                  <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+              </ul>
+            </nav>
+
+            <!-- Logo in the Center -->
+            <div class="logo-menu">
+                <img
+                  src="videos/Transparent.JPEG"
+                  alt="Company Logo"
+                  class="menu-logo"
+                />
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Hemodialysis Technologies</h1>
+            <p>Delivering essential strategies for safe and effective hemodialysis</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="content-grid">
+            <!-- Content Item 1 -->
+            <div class="content-item">
+                <img src="videos/Med3.jpg" alt="Sodium Bicarbonate">
+                <div class="content-text">
+                    <h3>Sodium Bicarbonate</h3>
+                    <p>Development know-how and technology for Medical &amp; Pharma grade Sodium Bicarbonate production. We do engineering design and launch Hemodialysis sodium bicarbonate production line according to IPEC-PQG GMP  regulations  and our technology addressed particle size, chemical purity and microbial requirements according to USP and BP standards.</p>
+                </div>
+            </div>
+
+            <!-- Content Item 2 -->
+            <div class="content-item">
+                <img src="videos/Med2.jpg" alt="Hemodialysis Acid">
+                <div class="content-text">
+                    <h3>Hemodialysis Acid Solutions</h3>
+                    <p>Hemodialysis requires clean dialysate to remove metabolites like urea. Our reliable engineering design ensures cost-effective, high-volume dialysate production.</p>
+                </div>
+            </div>
+
+            <!-- Content Item 3 -->
+            <div class="content-item">
+                <img src="videos/Med4.jpg" alt="Dry Acid Concentrates">
+                <div class="content-text">
+                    <h3>Dry Acid Concentrates</h3>
+                    <p>Dry acid concentrate, supplied in powder form, is mixed with water to create liquid acid for dialysis machines. We design systems that streamline this process.</p>
+                </div>
+            </div>
+
+            <!-- Content Item 4 -->
+            <div class="content-item">
+                <img src="videos/Med1.jpg" alt="Hemodialysis Disinfectant">
+                <div class="content-text">
+                    <h3>Hemodialysis Disinfectant</h3>
+                    <p>Our technology offers a range of disinfectants compatible with various hemodialysis machines, from cold to hot biofilm removal and decalcification solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us today to learn more about our hemodialysis solutions.</p>
+        <a href="contact.html">Get in Touch</a>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Company Information -->
+            <div class="footer-company-info">
+                <h4>About CANEDGE TECHNICAL SERVICES CORPORATION</h4>
+                <p>We specialize in delivering technical and engineering services for various industries, including extractive metallurgy, consulting, and commissions.</p>
+                <p>&copy; 2024 CANEDGE TECHNICAL SERVICES CORPORATION. All rights reserved.</p>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="footer-links">
+                <h4 style="color: #fff;">Quick Links</h4>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+                        <li><a href="services.html" style="color: #fff; text-decoration: none;">Services</a></li>
+                        <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+                        <li><a href="policy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+                        <li><a href="terms.html" style="color: #fff; text-decoration: none;">Terms of Service</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

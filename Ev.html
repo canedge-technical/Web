@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CANEDEGE CONSULTANT COMPANY specializes in clean energy solutions and EV battery technology.">
+    <meta name="keywords" content="clean energy, EV batteries, renewable energy, energy solutions, CANEDGE">
+    <meta name="author" content="CANEDEGE CONSULTANT COMPANY">
+    <title>Clean Energy & EV Batteries</title>
+
+    <!-- Include Libre Baskerville Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* General Styles */
+        body, html {
+            font-family: 'Libre Baskerville', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #000;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #66696d;
+            padding: 1em;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-menu {
+            max-width: 150px;
+        }
+
+        /* Navigation Menu */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5em;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #bbb;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #66696d;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #575c60;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            background-image: url('videos/Clean3.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 2em;
+            border-radius: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-top: 0.5em;
+        }
+
+        /* Content Section */
+        .content-section {
+            padding: 4em 10%;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .content-section h2 {
+            font-size: 2.5em;
+            color: #002147;
+            margin-bottom: 1.5em;
+        }
+
+        .content-section p, .content-section ul {
+            font-size: 1.2em;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto 2em;
+            line-height: 1.6;
+        }
+
+        .content-section ul {
+            list-style-type: disc;
+            margin-left: 0;
+            padding-left: 20px;
+        }
+
+        .content-section ul li {
+            margin-bottom: 0.75em;
+        }
+
+        /* Slideshow Section */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            padding: 4em 0;
+            background-color: #002147;
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 1em;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+        }
+
+        .cta-section a {
+            background-color: #ffdd57;
+            color: #002147;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-section a:hover {
+            background-color: #e6c446;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #66696d;
+            color: #fff;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .footer-content nav {
+            display: flex;
+            gap: 1.5em;
+        }
+
+        footer .footer-content p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .slideshow-container img {
+                width: 100%;
+            }
+
+            footer .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-content nav {
+                margin-top: 1em;
+            }
+
+            .content-section {
+                padding: 2em 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Navigation Menu -->
+            <nav>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="index.html" aria-label="Home">Home</a>
+                        <div class="dropdown-content">
+                            <a href="#about-us">About Us</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html" aria-label="Services">Services</a>
+                        <div class="dropdown-content">
+                            <a href="consult.html">Consulting</a>
+                            <a href="ENG.html">Engineering</a>
+                            <a href="cons.html">Commissioning</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="industries.html" aria-label="Industries & Technologies">Industries & Technologies</a>
+                        <div class="dropdown-content">
+                            <a href="Medical.html">Medical and Pharmaceuticals</a>
+                            <a href="Metal.html">Metallurgy and Mining</a>
+                        </div>
+                    </li>
+                    <li><a href="startup.html">Innovations</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Logo in the Center -->
+            <div class="logo-menu">
+                <img src="videos/Transparent.JPEG" alt="Company Logo" class="menu-logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Clean Energy & EV Batteries</h1>
+            <p>Powering the future with sustainable energy solutions</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section">
+        <h2>Our Clean Energy Expertise</h2>
+        <p>We are leaders in the development of clean energy solutions, with a focus on driving innovation and sustainability in the energy sector. Our expertise spans a broad range of renewable energy projects and advanced EV battery technologies, offering cutting-edge solutions that are shaping the future of energy.</p>
+
+        <h3>Pioneers in Renewable Energy</h3>
+        <p>Our team excels in delivering renewable energy solutions, working closely with industry leaders to design and implement high-efficiency systems for solar and wind energy projects. By leveraging the latest advancements in technology and engineering, we help organizations transition to sustainable energy sources that reduce their carbon footprint and enhance energy independence.</p>
+
+        <p>Our renewable energy services include:</p>
+        <ul>
+            <li>Design and installation of solar energy systems</li>
+            <li>Development of wind power infrastructure</li>
+            <li>Integration of renewable sources with existing energy grids</li>
+            <li>Optimization of energy efficiency for maximum output and cost savings</li>
+        </ul>
+
+        <h3>Advanced Electric Vehicle (EV) Battery Technology</h3>
+        <p>We specialize in the development of high-performance battery technologies for the growing electric vehicle (EV) market. We collaborate with top manufacturers to design and optimize EV batteries that offer longer range, faster charging times, and improved durability.</p>
+
+        <p>Key areas of expertise include:</p>
+        <ul>
+            <li>Design and development of next-generation EV batteries</li>
+            <li>Battery performance optimization for extended life cycles</li>
+            <li>Collaboration with industry-leading manufacturers</li>
+            <li>Research and development for improved energy storage solutions</li>
+        </ul>
+
+        <h3>Why Choose Us?</h3>
+        <p>By partnering with us, you gain access to:</p>
+        <ul>
+            <li>Industry-leading expertise in renewable energy and EV battery technologies</li>
+            <li>Custom engineering solutions designed to meet your unique project needs</li>
+            <li>Strong collaborations with top-tier manufacturers and industry innovators</li>
+            <li>A commitment to driving the global shift towards clean, sustainable energy</li>
+        </ul>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section class="gallery-section">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="videos/Clean1.jpg" alt="Gallery Image 1">
+            </div>
+            <div class="mySlides fade">
+                <img src="videos/Clean2.jpg" alt="Gallery Image 2">
+            </div>
+            <div class="mySlides fade">
+                <img src="videos/Clean3.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="mySlides fade">
+                <img src="videos/Clean4.jpg" alt="Gallery Image 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <h2>Join the Clean Energy Revolution</h2>
+        <p>Contact us today to discover how our clean energy and EV battery solutions can benefit your business.</p>
+        <a href="contact.html">Get in Touch</a>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Company Information -->
+            <div class="footer-company-info">
+                <h4>About CANEDGE TECHNICAL SERVICES CORPORATION</h4>
+                <p>We specialize in delivering technical and engineering services for various industries, including extractive metallurgy, consulting, and commissions. Our commitment to innovation, integrity, and quality ensures that we meet our client's highest expectations.</p>
+                <p>&copy; 2024 CANEDGE TECHNICAL SERVICES CORPORATION. All rights reserved.</p>
+            </div>
+
+<!-- Navigation Links -->
+<div class="footer-links">
+    <h4 style="color: #fff;">Quick Links</h4>
+    <nav>
+        <ul>
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="services.html" style="color: #fff; text-decoration: none;">Services</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+            <li><a href="policy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="terms.html" style="color: #fff; text-decoration: none;">Terms of Service</a></li>
+        </ul>
+    </nav>
+</div>
+
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 15000); // Change image every 15 seconds
+        }
+    </script>
+</body>
+</html>

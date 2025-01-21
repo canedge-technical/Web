@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Innovations for high-quality engineering and consulting services.">
+    <meta name="keywords" content="contact, consulting, engineering, services">
+    <meta name="author" content="Innovations">
+    <title>Contact Us</title>
+
+    <!-- Include Libre Baskerville Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+  
+    <style>
+        /* General Styles */
+        body, html {
+            font-family: 'Libre Baskerville', serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #000;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            padding: 1em;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-menu {
+            max-width: 150px;
+        }
+
+        /* Hamburger Menu */
+        .hamburger-menu {
+            display: none;
+            font-size: 2em;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        /* Navigation Menu */
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffdd57;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000;
+            padding: 0.5em 0;
+            min-width: 160px;
+            z-index: 1000;
+            flex-direction: column;
+        }
+
+        /* Show dropdown on hover for desktop */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            display: block;
+            color: #fff;
+            padding: 10px;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #000;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.5s ease, opacity 0.5s ease;
+            }
+
+            .nav-links.show {
+                display: flex;
+                max-height: 500px;
+                opacity: 1;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+        }
+
+        /* Contact Section */
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2em 0;
+            text-align: center;
+            position: relative;
+            background-image: url('videos/Contact.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 1000px;
+            border: none;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 2em 0;
+            text-align: center;
+        }
+
+        footer .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        footer .footer-container nav {
+            display: flex;
+            gap: 1.5em;
+        }
+
+        footer .footer-container p {
+            margin: 0;
+        }
+
+        /* Responsive Design for Footer */
+        @media screen and (max-width: 768px) {
+            footer .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            footer .footer-container nav {
+                margin-top: 1em;
+            }
+
+            .contact-section {
+                padding: 2em;
+            }
+
+            iframe {
+                height: 1200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navigation" role="button" tabindex="0">
+                &#9776;
+            </div>
+    
+            <nav id="navigation">
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="index.html" aria-label="Home">Home</a>
+                        <div class="dropdown-content">
+                            <a href="#about-us">About Us</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="services.html" aria-label="Services">Services</a>
+                        <div class="dropdown-content">
+                            <a href="consult.html">Consulting</a>
+                            <a href="ENG.html">Engineering</a>
+                            <a href="commision.html">Commissioning</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="industries.html" aria-label="Industries & Technologies">Industries & Technologies</a>
+                        <div class="dropdown-content">
+                            <a href="Medical.html">Medical and Pharmaceuticals</a>
+                            <a href="Metal.html">Metallurgy and Mining</a>
+                        </div>
+                    </li>
+                    <li><a href="startup.html">Innovations</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                    <li><a href="contact.html" aria-label="Contact">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <div class="logo-menu">
+                <img src="videos/Transparent.JPEG" alt="Company Logo" class="menu-logo">
+            </div>
+        </div>
+      </header>
+
+    <main>
+        <section class="contact-section">
+            <div class="contact-content">
+                <!-- Embedded Google Form -->
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSctef6nvjnMfftCXGhXjV4_JB8erq1zVG5TsF8wC9-cWeQyzA/viewform?embedded=true">Loading…</iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Navigation Links -->
+<!-- Navigation Links -->
+<div class="footer-links">
+    <h4 style="color: #fff;">Quick Links</h4>
+    <nav>
+        <ul>
+            <li><a href="index.html" style="color: #fff; text-decoration: none;">Home</a></li>
+            <li><a href="services.html" style="color: #fff; text-decoration: none;">Services</a></li>
+            <li><a href="contact.html" style="color: #fff; text-decoration: none;">Contact</a></li>
+            <li><a href="policy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="terms.html" style="color: #fff; text-decoration: none;">Terms of Service</a></li>
+        </ul>
+    </nav>
+</div>
+
+    </footer>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    // Toggle the mobile menu
+    function toggleMenu() {
+        navLinks.classList.toggle('show');
+        hamburgerMenu.setAttribute('aria-expanded', navLinks.classList.contains('show'));
+    }
+
+    hamburgerMenu.addEventListener('click', toggleMenu);
+
+    // Toggle dropdown content on mobile
+    dropdowns.forEach(dropdown => {
+        const trigger = dropdown.querySelector('a');
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+
+        trigger.addEventListener('click', function(event) {
+            if (window.innerWidth <= 768) {
+                event.preventDefault(); // Prevent link navigation on mobile
+                dropdownContent.classList.toggle('show');
+                dropdown.classList.toggle('active');
+
+                // Close other dropdowns
+                dropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.querySelector('.dropdown-content').classList.remove('show');
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+            }
+        });
+    });
+});
+
+      </script>
+
+</body>
+</html>
